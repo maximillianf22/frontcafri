@@ -1,60 +1,66 @@
 <footer id="footer" class="">
      
 
-<div class="box-footer-links"><div class="row">
-     
-
-     <div class="footer-links__footer-item-link col-lg-3">
-          <div class="item-title lg pad-all" style="margin-top:15px; border:none !important ">
-               
-          <img src="{{ asset('/content/upload/theme/logo_footer.png') }}"  alt="Tu proveedor" crossorigin="anonymous">
-               <div class="footer-icon-open1 lg brd_">
-                    
-               </div>
+   <footer class="footer" style="border-top: 1px solid #afafaf; padding-top: 40px; margin-top:20px;">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4" style="margin-bottom:20px;">
+              <ul class="list-unstyled my-4">
+                <li><h3 class="text-success">Nosotros</h3></li>
+                <li style="line-height: 25px;"> <a href="#">Quienes Somos</a> </li>
+                <li style="line-height: 25px;"> <a href="#">Promociones</a> </li>
+                <li style="line-height: 25px;"> <a href="https://ventual.co/login">Iniciar Comercio</a> </li>
+              </ul>
+            </div>
+            <div class="col-md-4" style="margin-bottom:20px;">
+              <ul class="list-unstyled my-4">
+                <li><h3 class="text-success">Ayuda</h3></li>
+                <li style="line-height: 25px;"> <a href="#">Contacto</a> </li>
+                <li style="line-height: 25px;"> <a href="#">Preguntas frecuntes</a> </li>
+                <li style="line-height: 25px;"> <a href="#">Registrarme</a> </li>
+              </ul>
+            </div>
+            <div class="col-md-4" style="margin-bottom:20px;">
+              <div class="text-center">
+                  @if(!empty($Config_->logo))
+                       @if (file_exists( public_path().'/content/upload/theme/'.$Config_->logo ))
+                            <a href="{{route('index')}}"><img id="logoTheme" src="{{ asset('/content/upload/theme/'.$Config_->logo) }}" alt="Logo" ></a>
+                       @else
+                            <a href="{{route('index')}}"><img id="logoTheme" src="{{ asset('/content/upload/theme/'.$Config_->icono) }}" alt="Logo" ></a>   
+                       @endif
+                  @else
+                  @endif
+              </div>
+              <div class="row align-items-center" style="margin-top:20px;">
+                <div class="col-4 text-center">
+                  <a href="#"><img src="https://ventual.co/assets/home/images/facebook.png" style="width:40px;" alt=""></a>
+                </div>
+                <div class="col-4 text-center">
+                  <a href="#"><img src="https://ventual.co/assets/home/images/twitter.png" style="width:40px;" alt=""></a>
+                </div>
+                <div class="col-4 text-center">
+                  <a href="#"><img src="https://ventual.co/assets/home/images/youtube.png" style="width:40px;" alt=""></a>
+                </div>
+              </div>
+              <div class="row align-items-center" style="margin-top:40px;">
+                <div class="col-6 text-right">
+                  <a href="#"><img src="https://ventual.co/assets/home/images/googlePlay.png" style="width:100%;" alt=""></a>
+                </div>
+                <div class="col-6">
+                  <a href="#"><img src="https://ventual.co/assets/home/images/appStore.png" style="width:100%;" alt=""></a>
+                </div>
+              </div>
+            </div>
           </div>
-          
-     </div>
-
-     <div class="footer-links__footer-item-link col-lg-4">
-          <div class="item-title lg pad-all" style="margin-top:20px;border:none !important ">
-               <p>Atención al Cliente</p>
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="footer_nav_container">
+                <div class="cr">©2018 Todos los derechos reservados. <a href="#">Cafri by Ventual</a></div>
+              </div>
+            </div>
           </div>
-          <div class="footer-links__content-items-links" style="border:none !important ">
-               <div class="content-items-links__item-link item-link--panel-open lg" style="border:none !important ">
-                    <a href="#">Politica de Calidad</a>
-                    <a href="#">soporte@cafri.com</a>
-               </div>
-          </div>
-     </div>
-
-     <div class="footer-links__footer-item-link col-lg-3" >
-          <div class="item-title lg pad-all"  style="margin-top:20px;border:none !important">
-               <p>Siguenos </p>
-          </div>
-          <div class="footer-links__content-items-links">
-               <div class="content-items-links__item-link item-link--panel-open lg" style="display:inline-block">
-                    <a href="#" target="new"><img src="{{ asset('/content/upload/theme/facebook.svg') }}"  alt="Tu proveedor" crossorigin="anonymous">  </a>
-
-                    <a href="#" target="new"><img src="{{ asset('/content/upload/theme/instagram.svg') }}"  alt="cafri" crossorigin="anonymous">   </a>
-                    
-               </div>
-               <div class="content-items-links__item-link item-link--panel-open lg" style="display:inline-block; height:50px;">
-                   
-               </div>
-               <div class="content-items-links__item-link item-link--panel-open lg" style="display:inline-block">
-                    <div style="display:inline-block !important ">
-                      <!--
-                         <a href="https://play.google.com/store/apps/details?id=com.mercapanda" target="blank"><img src="{{ asset('/content/upload/app/GooglePlay_icn.png') }}"  alt="google play" crossorigin="anonymous" width="80px"  >  </a>
-                         <a href="https://apps.apple.com/co/app/merca-panda/id1486462067" target="blank"><img src="{{ asset('/content/upload/app/AppStore_icn.png') }}"  alt="App Store" crossorigin="anonymous"  width="80px">   </a>
-                       -->
-                    </div>
-               </div>
-          </div>
-     </div>
-
-     
-     </div>
-</div>
+        </div>
+      </footer>
 
 
 <a href="https://api.whatsapp.com/send?phone=573044458195&amp;text=Hola,%20deseo%20realizar%20un%20nuevo%20pedido%20" class="btn_whatsapp" target="_blank">

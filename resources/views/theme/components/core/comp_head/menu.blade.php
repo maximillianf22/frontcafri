@@ -7,7 +7,7 @@
                         <span class="nav-link-inner--text "><strong>Colombia</strong></span>
                     </a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item d-none d-sm-none d-md-block">
                     <a class=" p-1 m-0 nav-link nav-link-icon" href="#">
                         <strong><i class="fab fa-whatsapp"></i>
                         <span class="nav-link-inner--text">+57 (381) 818-8181</span></strong>

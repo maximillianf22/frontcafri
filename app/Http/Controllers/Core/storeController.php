@@ -103,6 +103,12 @@ class storeController extends Controller {
 
                 $Config_ = core_template_manager::where('idState',1)->where('main',1)->first(); 
 
+                  $Sliders_ =  Slider::where('idState',1)->get();
+            $Offers_ = Store_products_selection::where('isOffers',1)
+            ->where('visible_publico',$type_client_)
+            ->where('idState',1)
+            ->groupBy('nameProduct')->get();
+
                 $Store_categorie_menu =  Store_products_selection::where('visible_publico', $type_client_)
                 ->where('idState',1)
                 ->groupBy('categoria_main')
@@ -151,6 +157,7 @@ class storeController extends Controller {
                     "Products" => $Products,
                     "Store_categorie_" => $Store_categorie_,
                     'Slug_' => $nameSlug,
+                    "Offers_" => $Offers_,
                     'min_compra_' => $min_compra_,
                     'envio_' => $envio_,
                     'subcategoriasslug_' => $subcategoriasslug_,
@@ -177,6 +184,12 @@ class storeController extends Controller {
                 $Config_ = core_template_manager::where('idState',1)->where('main',1)->first();
 
                 
+                 $Sliders_ =  Slider::where('idState',1)->get();
+            $Offers_ = Store_products_selection::where('isOffers',1)
+            ->where('visible_publico',$type_client_)
+            ->where('idState',1)
+            ->groupBy('nameProduct')->get();
+            
                 $Store_categorie_menu =  Store_products_selection::where('visible_publico', $type_client_)
                 ->where('idState',1)
                 ->groupBy('categoria_main')
@@ -225,6 +238,7 @@ class storeController extends Controller {
                     "Store_categorie_" => $Store_categorie_,
                     'Slug_' => $nameSlug,
                     'min_compra_' => $min_compra_,
+                    "Offers_" => $Offers_,
                     'envio_' => $envio_,
                     'subcategoriasslug_' => $subcategoriasslug_,
                     "Store_categorie_menu" => $Store_categorie_menu

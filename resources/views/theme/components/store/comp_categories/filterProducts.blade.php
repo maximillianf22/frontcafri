@@ -1,5 +1,18 @@
-@if(sizeof($Store_categorie_)>=1)
+<style type="text/css">
 
+.card-background.card-blog {
+    height: 200px;
+}
+
+.card-background .card-body {
+   
+    min-height: 200px;
+}
+
+</style>
+
+
+@if(sizeof($Store_categorie_)>=1)
 <div class="grid-products center-grid-products "> 
      <div class="container-fluid">
           @include('theme.components.store.comp_categories.searcProduct')
@@ -20,37 +33,60 @@
           </div>
      </div>
 
-     <div class="container-fluid  ">
-          <div class="row" style="width: 100%"> 
-          @if(sizeof($subcategoriasslug_))
-          <div class="mercado__title wrapper txt-center">
-               <h1>Subcategorias Disponibles</h1>
-               <div class="slogan-category">Explora nuestras variedad de productos en nuestras secciones</div>
-          </div> 
+     <div class="container-fluid">
+     <section class="blogs-1">
+        <div class="container">
+          <div class="row mb-5">
+            <div class="col-md-8"><br>
+               @if(sizeof($subcategoriasslug_))
+              <h3 class="display-3">Categorias Disponibles</h3>
+              <p class="lead mt-1">¡Explora nuestras variedad de productos en nuestras secciones!</p>
+               @endif
+            </div>
           </div>
-          @endif 
-
-          <div class="row "> 
-                
-               @foreach( $Store_categorie_ as $subcategorias)
-               <div id="category-{{$subcategorias->idCategorie}}" 
-                    class="col-12 col-md-3 col-sm-6  pad-all " >
-                    
-                    <a href="{{route('store.subcategory.lisproduct',[$subcategorias->slug_main,$subcategorias->slug_subcategoria])}}" id="id-category-{{$subcategorias->idCategorie}}" class="store-home-components-0-x-bannerItem " style="margin:3px">
-                         <img style="height:100%;width:100%" 
-                              src="{{ asset('/content/upload/store/'.$subcategorias->imageCategorie) }}" 
-                              alt="{{$subcategorias->nameCategorie}}" 
-                              title="{{$subcategorias->nameCategorie}} " 
-                              class="exito-home-components-0-x-bannerItemImage exito-home-components-0-x-bannerImageShadow mb2" 
-                              crossorigin="anonymous">
-                         <div class="store-components-bannerInformation">
-                              {{$subcategorias->nameCategorie}}
-                         </div>
-                    </a>
-               </div>
-               @endforeach 
+            <div class="row align-items-center p-3">
+          @foreach( $Store_categorie_ as $subcategorias)
+          @if($subcategorias->nameCategorie == 'Bebidas')
+            <div class="col-lg-6">
+              <div class="card card-blog card-background" data-animation="zooming">
+                <div class="full-background" style="background-image: url('{{ asset('/content/upload/store/'.$subcategorias->imageCategorie) }}')"></div>
+                <a href="{{route('store.subcategory.lisproduct',[$subcategorias->slug_main,$subcategorias->slug_subcategoria])}}" 
+                    id="id-category-{{$subcategorias->idCategorie}}"
+                    alt="{{$subcategorias->nameCategorie}}" 
+                    title="{{$subcategorias->nameCategorie}} " 
+                    crossorigin="anonymous">
+                  <div class="card-body">
+                    <div class="content-bottom">
+                      <h5 class="card-title text-center">{{$subcategorias->nameCategorie}}</h5>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            @else
+            <div class="col-lg-3">
+              <div class="card card-blog card-background" data-animation="zooming">
+                <div class="full-background" style="background-image: url('{{ asset('/content/upload/store/'.$subcategorias->imageCategorie) }}')"></div>
+                <a href="{{route('store.subcategory.lisproduct',[$subcategorias->slug_main,$subcategorias->slug_subcategoria])}}" 
+                    id="id-category-{{$subcategorias->idCategorie}}"
+                    alt="{{$subcategorias->nameCategorie}}" 
+                    title="{{$subcategorias->nameCategorie}} " 
+                    crossorigin="anonymous">
+                  <div class="card-body">
+                    <div class="content-bottom">
+                      <h5 class="card-title text-center">{{$subcategorias->nameCategorie}}</h5>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          @endif
+          @endforeach 
           </div>
-
+        </div>
+      </section>
+     </div>
+     
           <div class="row ">
                <div id="filterProducts" class="container-fluid pad-lft pad-all " style="border-top:0px solid #F1F3F4">
                </div>

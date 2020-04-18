@@ -26,16 +26,6 @@
     @include(JPATH_COMPONENTS . 'core.comp_head.index')
     <!-- Contenido main -->
     <main role="main">
-      <div class="header-filter contactus-3 bg-primary" style="background-image: url('{{asset('front/images/header.jpg')}}'); background-attachment: fixed background-repeat:   no-repeat;  background-position: top; height: 35vh;">
-      <div class="page-header-image"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 text-center">
-              
-          </div>
-        </div>
-      </div>
-    </div>
       @yield('content-store-theme')
     </main>
     @include(JPATH_COMPONENTS . 'core.comp_footer.index')
