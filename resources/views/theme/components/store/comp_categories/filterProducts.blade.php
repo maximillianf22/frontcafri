@@ -18,6 +18,11 @@
           @include('theme.components.store.comp_categories.searcProduct')
      </div>
 
+     <div class="row ">
+          <div id="filterProducts" class="container-fluid pad-lft pad-all " style="border-top:0px solid #F1F3F4">
+          </div>
+     </div>
+
      <div class="container-fluid ">
           <div class="row  pad-all" style="border:none !important; font-size:14px ">
           <b style="border:none !important"> <a href="{{route('index')}}" style="color: inherit;">inicio</a>&nbsp;&nbsp; / &nbsp;&nbsp;
@@ -47,7 +52,7 @@
             <div class="row align-items-center p-3">
           @foreach( $Store_categorie_ as $subcategorias)
           @if($subcategorias->nameCategorie == 'Bebidas')
-            <div class="col-lg-6">
+            <div class="col-lg-4">
               <div class="card card-blog card-background" data-animation="zooming">
                 <div class="full-background" style="background-image: url('{{ asset('/content/upload/store/'.$subcategorias->imageCategorie) }}')"></div>
                 <a href="{{route('store.subcategory.lisproduct',[$subcategorias->slug_main,$subcategorias->slug_subcategoria])}}" 
@@ -64,7 +69,7 @@
               </div>
             </div>
             @else
-            <div class="col-lg-3">
+            <div class="col-lg-4">
               <div class="card card-blog card-background" data-animation="zooming">
                 <div class="full-background" style="background-image: url('{{ asset('/content/upload/store/'.$subcategorias->imageCategorie) }}')"></div>
                 <a href="{{route('store.subcategory.lisproduct',[$subcategorias->slug_main,$subcategorias->slug_subcategoria])}}" 
@@ -87,10 +92,7 @@
       </section>
      </div>
      
-          <div class="row ">
-               <div id="filterProducts" class="container-fluid pad-lft pad-all " style="border-top:0px solid #F1F3F4">
-               </div>
-          </div>
+          
 
 
 
