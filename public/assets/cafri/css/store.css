@@ -1,0 +1,78 @@
+
+/*-- Theme Style Store  ---*/
+
+.sticky { position:absolute; top:0px; left:0px;
+	background:url("/content/upload/Stickers.png") top left no-repeat;
+	height: 70px; width: 83px;
+}
+
+.album{ background: #FFF}
+.title-section{ font-weight:bold;font-size:24px;}
+.info-section{font-size:14px;}
+
+
+.searchProduct{ border:1px solid #212121 !important}
+
+.products-thumbnail-grid {margin-top:20px; }
+.sc-item-store {
+	width: 207px;height: auto;
+	display: flex;display: inline-block;flex-direction: column;
+	padding: 10px;margin: 5px;text-align: center;
+	border-radius: 9px;position: relative;background: white none repeat scroll 0% 0%;
+	border:1px solid #F5F5F5;
+}
+
+.sc-item-store:hover {
+	/* box-shadow: 0 0 8px rgba(0, 0, 0, .5); */
+	border:1px solid #DDD;
+	cursor: pointer;
+}
+
+.sc-item-store .item-categorie{ font-weight:border !important ;padding-top:15px;font-size:14px;text-align: center;color:#17100D}
+ .sc-item-store .img-card-product-ql {
+	display: flex;
+	-moz-box-align: center;
+	align-items: center;
+	max-height: 150px;
+	position: relative;
+	margin-bottom: 10px;
+ }
+ .sc-item-store .img-card-product-ql  img{
+	border:1px solid red;
+ }
+
+ .sc-item-store .info-article {padding: 3px !important;border:1px solid red; }
+ .sc-item-store .info-article > .name{ font-size:14px; font-weight:border; }
+ .sc-item-store .info-article > .item-price{ padding: none !important ; font-size:18px; font-weight: bold;color:#9eb934 }
+ .sc-item-store .info-article > .previous-price{font-size:13px;color:#868E96 !important; text-decoration: line-through}
+ img {
+	vertical-align: middle;
+	border-style: none;
+ }
+
+ .content-cart{ color:#7D7D7D}
+.empty-cart{ padding: 60px; text-align: center}
+
+
+.searchProduct{ border:1px solid red }
+
+/*--- Mercapanda Css ---*/
+.head-app-mercapanda{color:#000}
+.head-app-mercapanda .menu-left .item {min-width:60px;text-align:center;display: inline-block !important;}
+.head-app-mercapanda .menu-left .menu i {color:#000 !important ; font-weight: bold !important;font-size:20px !important ;}
+
+.head-app-mercapanda .menu-right  {text-align: right; padding-right:100px}
+.head-app-mercapanda .menu-right .item {min-width:30px;text-align:right;display: inline-block !important;padding:10px; cursor: pointer;}
+.head-app-mercapanda .menu-right .item:hover {border-bottom:1px solid #9EB93460;}
+.head-app-mercapanda .menu-right i {color:#000 !important ; font-weight: bold !important;font-size:18px !important ;}
+.logo-mobil{display: none}
+
+@media (max-width: 760px){
+	.head-app-mercapanda .menu-left .logo{width:60%; height:45px;}
+	.head-app-mercapanda .menu-right  {text-align: right; padding-right:30px}
+	.logo{ display:none !important;border:1px solid blue }
+	.logo-mobil{ display: block;}
+
+	.title-caption-search{ display: none;border:1px solid red;}
+}
+

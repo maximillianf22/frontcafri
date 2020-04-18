@@ -1,0 +1,550 @@
+/*01 */
+body{background:#F0F4F7; font-family: tahoma !important; color:#000 !important; }
+.view-password{ font-size:11px;color:#32536A; padding:2px 6px 4px;border-radius:2px;
+position: absolute; margin-top:5px;float: right; right:7px; 
+cursor: pointer; font-weight: bold}
+.box-shadow-app{
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+}
+
+.showItem{ display: block}
+.hideItem{ display: none}
+
+.bg-theme{ background: #9EB934;color:#FFF}
+/*Head*/
+.bar-top-head{ 
+	min-height:33px; text-align: center !important; font-weight: border; padding:7px ;
+	text-align:center !important; font-size:14px;
+}
+/*footer */
+.bg-theme-footer{ background:#CDD0C2; padding:10px;}
+
+/*Menu App*/
+.menu-left-options .item-menu{padding: 7px 5px 5px 30px; font-size:15px; font-weight: normal }
+.menu-left-options .item-menu > .category-list{padding:10px 5px 10px 30px; font-size:16px; cursor: pointer;
+min-width: 100px;}
+.menu-left-options .item-menu > .category-list ul li { max-width:150px; padding:5px}
+.menu-left-options .item-menu > .category-list ul li:hover{border-bottom:1px solid #9EB93460}
+
+
+
+
+/*--- 02 -Form Registro --*/
+.logo-theme{min-height: 80px; margin-bottom:5px; padding: 7px;
+text-align: center; }
+.terms_Conditions{padding:5px !important }
+.terms_Conditions a{color:#32536A; font-size:12px; background: none; margin: 0 !important; padding: 1px; font-weight:normal}
+.terms_Conditions a strong {font-weight:bold}
+.terms_Conditions .check-term { position: absolute}
+.terms_Conditions .info-term { margin: -5px 20px;}
+
+.existing-account,
+.login-footer {padding:10px; color:#32536A; font-size:12px;}
+.existing-account a,
+.login-footer a{color:#32536A; background: none; margin: 0 !important; padding: 1px; font-weight:normal}
+/*------------------------*/
+
+/* 03 Forms Options */
+.form-group{margin-top: 1px; margin-bottom:5px }
+
+/* Esquema Color theme */
+.btn-bg-theme{ background: #9eb934;color:#FFF; cursor: pointer; padding: 5px}
+
+
+
+/*--- WebSite Theme Personalizado ---*/
+.m-top{margin-top: 1px;}
+.carousel-item{height:300px !important; width: 100% }
+.carousel-item img {height:300px !important;}
+
+
+/*Store Productos*/
+
+
+/*--- Mercapanda Css ---*/
+.head-app-mercapanda{color:#000}
+.head-app-mercapanda .menu-left .item {min-width:60px;text-align:center;display: inline-block !important;}
+.head-app-mercapanda .menu-left .menu i {color:#000 !important ; font-weight: bold !important;font-size:20px !important ;}
+
+.head-app-mercapanda .menu-right  {text-align: right; padding-right:70px}
+.head-app-mercapanda .menu-right .item {min-width:30px;text-align:right;display: inline-block !important;padding:10px; cursor: pointer;}
+.head-app-mercapanda .menu-right .item:hover {border-bottom:1px solid #9EB93460;}
+.head-app-mercapanda .menu-right i {color:#000 !important ; font-weight: bold !important;font-size:18px !important ;}
+.logo-mobil{display: none}
+.show-web{ display: block}
+
+@media (max-width: 760px){
+    .show-web{ display: none}
+	.head-app-mercapanda .menu-left .logo{width:60%; height:45px;border:1px solid red }
+	.head-app-mercapanda .menu-right  {text-align: right; padding-right:30px}
+	.logo{ display:none !important;border:1px solid blue }
+	.logo-mobil{ display: block; }
+}
+
+
+
+
+.m44Jsp_ {-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-shadow:0 1px 5px 0 rgba(41,85,115,.21);box-shadow:0 1px 5px 0 rgba(41,85,115,.21);display:-webkit-box;display:-ms-flexbox;display:flex;height:48px;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;position:relative;background-color:#fff;z-index:2000;min-width:1264px}
+@media print{.m44Jsp_{height:auto;display:none}}
+.brd-radius{border-radius:25px;}
+.sidebar{ background: #23263E}
+.sidebar li{ padding: 10px 5px !important }
+.navbar{
+	/*
+	-webkit-box-align:center;-ms-flex-align:center;align-items:center;
+	-webkit-box-shadow:0 1px 5px 0 rgba(41,85,115,.21);
+	box-shadow:0 1px 5px 0 rgba(41,85,115,.21);
+	display:-webkit-box;display:-ms-flexbox;display:flex;height:48px;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;position:relative;background-color:#fff;
+	*/
+	box-shadow: none !important;
+}
+.rounded-circle{ width: 128px; height:128px;}
+.btn-file { position: relative;overflow: hidden; }
+.btn-file input[type=file] {
+	position: absolute; top: 0; right: 0;
+	min-width: 100%; min-height: 100%;
+	font-size: 100px; text-align: right;
+	filter: alpha(opacity=0); opacity: 0; outline: none;
+	background: white; cursor: inherit; display: block;
+}
+
+/*--- Personalizaciones ---*/
+.control-label{ font-size:12px;color:#212121 }
+input[type=text],
+input[type=date],
+select,
+input[type=textarea],
+input[type=password]{
+	border:1px solid #CCC !important;
+	height:35px; border-radius:2px;
+	padding:1px 10px !important;
+	font-size:14px; color:#32536A;
+}
+.select-selection {
+    padding:5px !important;
+    height: 35px !important;
+    outline: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+    background-color: #fff;
+    border-radius:2px;
+    border: 1px solid #d9d9d9;
+    border-top-width: 1px;
+    border-top-width: 1.02px;
+    -webkit-transition: all .3s cubic-bezier(.645,.045,.355,1);
+    -o-transition: all .3s cubic-bezier(.645,.045,.355,1);
+    transition: all .3s cubic-bezier(.645,.045,.355,1);
+    font-size:14px;
+    color:#32536A;
+}
+
+/*----- Form items -----*/
+.form-group label{font-weight:bold; font-size:12px; }
+
+
+.help-block{ font-size:11px;color:#32536A; padding-left:5px;}
+.btn{font-size:13px; padding: 5px 25px}
+/*-------------------------*/
+
+.content-header h1{ font-size:18px;color:#212121}
+.box > .box-header { background: #FFF !important }
+.box > .box-header > .box-title {color:#212121; font-size:16px; font-weight: bold  }
+
+
+/*Sidebar Menu Item options*/
+.main-sidebar{background: #23263E}
+.item-menu-sidebar,
+.item-menu-sidebar a{color:#fff; padding: 10px !important; font-size: 14px; }
+	.item-menu-sidebar:hover{background: #2F3249;color:#2F69D6}
+	.item-menu-sidebar:hover a{background: #2F3249;color:#2F69D6}
+
+
+/*-- Drop Menu User  Styles ----*/
+.user-menu a{font-size:14px !important; color:#212121; }
+.dropdown-menu{color:red }
+.user-body a,
+.user-header p{color:#212121 !important;}
+.user-body a:hover{ background: #EAF7FF !important  }
+
+/*-------------------------------*/
+.content-header { background: none; font-family: 'SF UI Display Bold' !important; border:none !important }
+.content-header h1{ font-family: 'SF UI Display Bold' !important }
+
+/*
+input { background:#FFF !important; border:1px solid #86A6BD !important ; padding:5px 7px !important ; height:33px !important ;
+font-size:14px !important ; color:#2D4454 !important ; border-radius:1px !important;  }
+ input:hover{ background:#EAF7FF !important  }
+ .form-control:focus {
+	border:1px solid  #66afe9 !important;
+	outline: 0;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6) !important;
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6) !important;
+ }
+*/
+
+/*general globals options */
+	.brd-r {border-radius: 4px;}
+	.brd_{border:1px solid red !important }
+	.line-separated{ width: 95%; margin: 0 auto; border-bottom: 1px solid #e0e0e0; height: 2px;}
+	.box-shadow{-webkit-box-shadow: 1px 0 5px rgba(0, 0, 0, 0.1); box-shadow: 1px 0 5px rgba(0, 0, 0, 0.1);}
+	pad-no{padding:0 !important}.pad-top{ padding-top:10px;}.pad-btm{ padding-bottom:10px;}.pad-lft{ padding-left:10px;}.pad-rgt{ padding-right:10px;}.pad-all{ padding:10px;}
+	.box-header b{ font-weight: bold;}
+	.logo {background:#FFF; color:#222}
+	.main-sidebar{background:#23263E;color:#0E4AA3;}
+	.navbar{ background: #FFF}
+	
+	.box {border:none !important; border-radius: 4px;}
+	.box .box-header{ background: #3E9BE9; border-top-left-radius: 3px; border-top-right-radius: 3px;color:#FFF;
+	font-size: 14px; font-weight: normal; font-family:tahoma}
+	.box .box-body { background: #FFF !important;}
+	
+	
+	/* Survey */
+	.new_question_add{
+		border-radius:3px;
+		padding:5px 20px;
+		background:#F0F4F7; 
+	}
+	
+	.title-survey{font-family:Arial; font-size:20px; font-weight:bold; padding: 15px 10px 1px 28px}
+	.survey-wizard{font-size:12px;color:#888; text-align: left; padding:2px 5px 10px 30px; background: #FFFFFF90 }
+	#design-survey{border:none;}
+	#design-survey .body-content { min-height: 200px; cursor: pointer; background: #FFF;border-radius:2px;}
+	#design-survey .body-content > #content-questions-survey .item-survey{ border:1px solid #E2E4E8; border-bottom:2px solid #DEE1E6; padding:10px; min-height:40px; margin: 5px 0; background:#FFFFFF;border-radius:3px}
+	#design-survey .body-content #content-questions-survey .item-survey:hover {border:1px solid #0747A680;border-radius:2px }
+	#design-survey .body-content #content-questions-survey .item-survey:hover .items-options{ display: block; color:#0E4AA3 }
+	#design-survey .body-content .items-options{ min-width:100px; height:15px; display: none;
+	margin-top:-2px; margin-right:7px;padding:1px 3px; text-align: right; }
+	
+	#design-survey .body-content .item-survey > .question-survey > .title{ width: 90%; font-size:14px; }
+	#design-survey .body-content .item-survey > .question-survey > .question-body{ font-size:12px; width:92%; min-height:60px; padding: 10px 20px; }
+	
+	.icn-options-items{ font-size:17px;cursor: pointer}
+	.btn-edit-name{display: none;font-size:11px;font-weight: bold;color:#FFF; background: #6B787F; border:none !important }
+	#design-survey .survey-header:hover .btn-edit-name{ display: block; color:#FFF; background: #6B787F;}
+	#design-survey .survey-header{ background: #FEF6D950; padding:20px 10px 20px 20px;font-size:14px; height:60px; font-weight: bold; }
+	#design-survey .survey-top-header{font-weight:normal;color:#222222;padding:10px 20px; text-align: left }
+	
+	#content-questions-survey{ min-height: 60px; margin-bottom:10px; }
+	.questions_title,
+	.questions_type {border:1px solid #D0D2D3; background: #FFF; width:100%; padding:5px 3px;}
+	
+	/*----- End Module Survey ------*/
+	
+
+
+
+	/* wizard Module Store */
+	/*wizard*/
+.wizard-content .wizard>.steps>ul>li:after,
+.wizard-content .wizard>.steps>ul>li:before {
+    content: '';
+    z-index: 9;
+    display: block;
+    position: absolute
+}
+.wizard-content .wizard {
+    width: 100%;
+    overflow: hidden
+}
+.wizard-content .wizard .content {
+    margin-left: 0!important
+}
+.wizard-content .wizard>.steps {
+    position: relative;
+    display: block;
+    width: 100%
+}
+.wizard-content .wizard>.steps .current-info {
+    position: absolute;
+    left: -99999px
+}
+.wizard-content .wizard>.steps>ul {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    margin: 0;
+    padding: 0;
+    list-style: none
+}
+.wizard-content .wizard>.steps>ul>li {
+    display: table-cell;
+    width: auto;
+    vertical-align: top;
+    text-align: center;
+    position: relative
+}
+.wizard-content .wizard>.steps>ul>li a {
+    position: relative;
+    padding-top: 52px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: block
+}
+.wizard-content .wizard.vertical>.steps>ul>li a {
+    margin-top: 0px;
+}
+.wizard-content .wizard>.steps>ul>li:before {
+    left: 0
+}
+.wizard-content .wizard>.steps>ul>li:after {
+    right: 0
+}
+.wizard-content .wizard>.steps>ul>li:first-child:before,
+.wizard-content .wizard>.steps>ul>li:last-child:after {
+    content: none
+}
+.wizard-content .wizard>.steps>ul>li.current>a {
+    color: #2f3d4a;
+    cursor: default
+}
+.wizard-content .wizard>.steps>ul>li.current .step {
+    border-color: #398bf7;
+    background-color: #fff;
+    color: #398bf7
+}
+.wizard-content .wizard>.steps>ul>li.disabled a,
+.wizard-content .wizard>.steps>ul>li.disabled a:focus,
+.wizard-content .wizard>.steps>ul>li.disabled a:hover {
+    color: #67757c;
+    cursor: default
+}
+.wizard-content .wizard>.steps>ul>li.done a,
+.wizard-content .wizard>.steps>ul>li.done a:focus,
+.wizard-content .wizard>.steps>ul>li.done a:hover {
+    color: #999
+}
+.wizard-content .wizard>.steps>ul>li.done .step {
+    background-color: #398bf7;
+    border-color: #398bf7;
+    color: #fff
+}
+.wizard-content .wizard>.steps>ul>li.error .step {
+    border-color: #f62d51;
+    color: #f62d51
+}
+.wizard-content .wizard>.steps .step {
+    background-color: #fff;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 24%;
+    z-index: 10;
+    text-align: center
+}
+.wizard-content .wizard.vertical>.steps .step {
+    left: 17%;
+}
+.wizard-content .wizard>.content {
+    overflow: hidden;
+    position: relative;
+    width: auto;
+    padding: 0;
+    margin: 0
+}
+.wizard-content .wizard>.content>.title {
+    position: absolute;
+    left: -99999px
+}
+.wizard-content .wizard>.content>.body {
+    padding: 20px 20px
+}
+.wizard-content .wizard>.content>iframe {
+    border: 0;
+    width: 100%;
+    height: 100%
+}
+.wizard-content .wizard>.actions {
+    position: relative;
+    display: block;
+    text-align: right;
+    padding: 20px 20px 20px
+}
+.wizard-content .wizard>.actions>ul {
+    float: right;
+    list-style: none;
+    padding: 0;
+    margin: 0
+}
+.wizard-content .wizard>.actions>ul:after {
+    content: '';
+    display: table;
+    clear: both
+}
+.wizard-content .wizard>.actions>ul>li {
+    float: left
+}
+.wizard-content .wizard>.actions>ul>li+li {
+    margin-left: 10px
+}
+.wizard-content .wizard>.actions>ul>li>a {
+    background: #398bf7;
+    color: #fff;
+    display: block;
+    padding: 7px 12px;
+    border-radius: 4px;
+    border: 1px solid transparent
+}
+.wizard-content .wizard>.actions>ul>li>a:focus,
+.wizard-content .wizard>.actions>ul>li>a:hover {
+    -webkit-box-shadow: 0 0 0 100px rgba(0, 0, 0, .05) inset;
+    box-shadow: 0 0 0 100px rgba(0, 0, 0, .05) inset
+}
+.wizard-content .wizard>.actions>ul>li>a:active {
+    -webkit-box-shadow: 0 0 0 100px rgba(0, 0, 0, .1) inset;
+    box-shadow: 0 0 0 100px rgba(0, 0, 0, .1) inset
+}
+.wizard-content .wizard>.actions>ul>li>a[href="#previous"] {
+    background-color: #fff;
+    color: #54667a;
+    border: 1px solid #d9d9d9
+}
+.wizard-content .wizard>.actions>ul>li>a[href="#previous"]:focus,
+.wizard-content .wizard>.actions>ul>li>a[href="#previous"]:hover {
+    -webkit-box-shadow: 0 0 0 100px rgba(0, 0, 0, .02) inset;
+    box-shadow: 0 0 0 100px rgba(0, 0, 0, .02) inset
+}
+.wizard-content .wizard>.actions>ul>li>a[href="#previous"]:active {
+    -webkit-box-shadow: 0 0 0 100px rgba(0, 0, 0, .04) inset;
+    box-shadow: 0 0 0 100px rgba(0, 0, 0, .04) inset
+}
+.wizard-content .wizard>.actions>ul>li.disabled>a,
+.wizard-content .wizard>.actions>ul>li.disabled>a:focus,
+.wizard-content .wizard>.actions>ul>li.disabled>a:hover {
+    color: #999
+}
+.wizard-content .wizard>.actions>ul>li.disabled>a[href="#previous"],
+.wizard-content .wizard>.actions>ul>li.disabled>a[href="#previous"]:focus,
+.wizard-content .wizard>.actions>ul>li.disabled>a[href="#previous"]:hover {
+    -webkit-box-shadow: none;
+    box-shadow: none
+}
+.wizard-content .wizard.wizard-circle>.steps>ul>li:after,
+.wizard-content .wizard.wizard-circle>.steps>ul>li:before {
+    top: 45px;
+    width: 50%;
+    height: 3px;
+    background-color: #398bf7
+}
+.wizard-content .wizard.wizard-circle>.steps>ul>li.current:after,
+.wizard-content .wizard.wizard-circle>.steps>ul>li.current~li:after,
+.wizard-content .wizard.wizard-circle>.steps>ul>li.current~li:before {
+    background-color: #F3F3F3
+}
+.wizard-content .wizard.wizard-circle>.steps .step {
+    width: 160px;
+    height: 50px;
+    line-height: 45px;
+    border: 3px solid #F3F3F3;
+    font-size: 1.3rem;
+    border-radius: 10px;
+}
+.wizard-content .wizard.wizard-notification>.steps>ul>li:after,
+.wizard-content .wizard.wizard-notification>.steps>ul>li:before {
+    top: 39px;
+    width: 50%;
+    height: 2px;
+    background-color: #398bf7
+}
+.wizard-content .wizard.wizard-notification>.steps>ul>li.current .step {
+    border: 2px solid #398bf7;
+    color: #398bf7;
+    line-height: 36px
+}
+.wizard-content .wizard.wizard-notification>.steps>ul>li.current .step:after,
+.wizard-content .wizard.wizard-notification>.steps>ul>li.done .step:after {
+    border-top-color: #398bf7
+}
+.wizard-content .wizard.wizard-notification>.steps>ul>li.current:after,
+.wizard-content .wizard.wizard-notification>.steps>ul>li.current~li:after,
+.wizard-content .wizard.wizard-notification>.steps>ul>li.current~li:before {
+    background-color: #F3F3F3
+}
+.wizard-content .wizard.wizard-notification>.steps>ul>li.done .step {
+    color: #FFF
+}
+.wizard-content .wizard.wizard-notification>.steps .step {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 1.3rem;
+    border-radius: 15%;
+    background-color: #F3F3F3
+}
+.wizard-content .wizard.wizard-notification>.steps .step:after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -8px;
+    margin-bottom: -8px;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 8px solid #F3F3F3
+}
+.wizard-content .wizard.vertical>.steps {
+    display: inline;
+    float: left;
+    width: 20%
+}
+.wizard-content .wizard.vertical>.steps>ul>li {
+    display: block;
+    width: 100%
+}
+.wizard-content .wizard.vertical>.steps>ul>li.current:after,
+.wizard-content .wizard.vertical>.steps>ul>li.current:before,
+.wizard-content .wizard.vertical>.steps>ul>li.current~li:after,
+.wizard-content .wizard.vertical>.steps>ul>li.current~li:before,
+.wizard-content .wizard.vertical>.steps>ul>li:after,
+.wizard-content .wizard.vertical>.steps>ul>li:before {
+    background-color: transparent
+}
+@media (max-width:768px) {
+    .wizard-content .wizard>.steps>ul {
+        margin-bottom: 20px
+    }
+    .wizard-content .wizard>.steps>ul>li {
+        display: block;
+        float: left;
+        width: 50%
+    }
+    .wizard-content .wizard>.steps>ul>li>a {
+        margin-bottom: 0
+    }
+    .wizard-content .wizard>.steps>ul>li:first-child:before {
+        content: ''
+    }
+    .wizard-content .wizard>.steps>ul>li:last-child:after {
+        content: '';
+        background-color: #398bf7
+    }
+    .wizard-content .wizard.vertical>.steps {
+        width: 15%
+    }
+}
+
+@media (max-width:480px) {
+    .wizard-content .wizard>.steps>ul>li {
+        width: 100%
+    }
+    .wizard-content .wizard>.steps>ul>li.current:after {
+        background-color: #398bf7
+    }
+    .wizard-content .wizard.vertical>.steps>ul>li {
+        display: block;
+        float: left;
+        width: 50%
+    }
+    .wizard-content .wizard.vertical>.steps {
+        width: 100%;
+        float: none;
+    }
+}

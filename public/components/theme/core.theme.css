@@ -1,0 +1,65 @@
+/*---- Globals Configurations ---*/
+*, ::after, ::before {
+
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+:root{
+--blue: #0250BB;
+--indigo: #6610f2;
+--purple: #6f42c1;
+--pink: #e83e8c;
+--red: #dc3545;
+--orange: #ff8000;
+--yellow: #ffe600;
+--green: #28a745;
+--teal: #20c997;
+--cyan: #5ac4f1;
+--white: #fff;
+--gray: #6c757d;
+--gray-dark: #343a40;
+--primary: #ffe600;
+--secondary: #2d3277;
+--success: #28a745;
+--info: #5ac4f1;
+--warning: #ffe600;
+--danger: #dc3545;
+--light: #f8f9fa;
+--dark: #343a40;
+--breakpoint-xs: 0;
+--breakpoint-sm: 576px;
+--breakpoint-md: 768px;
+--breakpoint-lg: 992px;
+--breakpoint-xl: 1200px;
+--font-family-tahoma: "tahoma";
+--font-family-sans-serif: proxima-nova,sans-serif;
+--font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+--theme : #afdbf6;
+--color_theme : #000;
+}
+
+body{ background: #FFF }
+
+
+/*-- 01 Slider ---*/
+
+/* Slider Web */
+.content-slider{ border-top:2px solid black;border-bottom:2px solid black; height:250px; margin-top: -3px; }
+.carousel-indicators { bottom: 1px;}
+.carousel-indicators li{ background: var(--theme) }
+
+.carousel-inner .carousel-item{ height:246px; align-content:bottom; object-position:center;}
+.carousel-inner .carousel-item img{ background-position: bottom ; object-fit: cover; width: 100%; height: 100% }
+ 
+@media (max-width: 760px){
+    .carousel{ background: #000; min-height:100px;  max-height:140px  }
+    .carousel-indicators { display: none}
+    .content-slider{ min-height:100px;  max-height:140px }
+    .carousel-inner .carousel-item{height:160px;  }
+    .carousel-inner .carousel-item img{
+          background-position: center top ;
+          object-fit: cover;
+          width: 100%; height:140px;
+     }
+     .custom-icon-label{ display: none }
+}
