@@ -1,3 +1,21 @@
+<nav class="navbar navbar-expand-lg p-0 m-0 navbar-dark bg-gradient-danger">
+    <div class="container p-1 m-0 ">
+            <ul class="navbar-nav ml-5 ml-lg-auto p-0 m-0">
+                <li class="nav-item ml-5 ">
+                    <a class=" p-1 m-0 nav-link nav-link-icon btn-lg btn-danger text-center mx-auto align-items-center" href="#">
+                        <i><img class="emoji" alt="🇨🇴" src="https://s.w.org/images/core/emoji/11.2.0/svg/1f1e8-1f1f4.svg" width="10%"></i>
+                        <span class="nav-link-inner--text "><strong>Colombia</strong></span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class=" p-1 m-0 nav-link nav-link-icon" href="#">
+                        <strong><i class="fab fa-whatsapp"></i>
+                        <span class="nav-link-inner--text">+57 (381) 818-8181</span></strong>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 <div class="container_fluid menu-top-page">
  <div class="row ">
      
