@@ -5,7 +5,7 @@
 */
 @media (min-width: 768px) and (max-width: 991px) {
     /* Show 4th slide on md if col-md-4*/
-    .carousel-product-inner-product .active.col-md-4.carousel-product-item + .carousel-product-item + .carousel-product-item + .carousel-product-item {
+    .carousel-inner-product .active.col-md-4.carousel-item + .carousel-item + .carousel-item + .carousel-item {
         position: absolute;
         top: 0;
         right: -33.3333%;  /*change this with javascript in the future*/
@@ -16,7 +16,7 @@
 }
 @media (min-width: 576px) and (max-width: 768px) {
     /* Show 3rd slide on sm if col-sm-6*/
-    .carousel-product-inner-product .active.col-sm-6.carousel-product-item + .carousel-product-item + .carousel-product-item {
+    .carousel-inner-product .active.col-sm-6.carousel-item + .carousel-item + .carousel-item {
         position: absolute;
         top: 0;
         right: -50%;  /*change this with javascript in the future*/
@@ -26,31 +26,31 @@
     }
 }
 @media (min-width: 576px) {
-    .carousel-product-item {
+    .carousel-item {
         margin-right: 0;
     }
     /* show 2 items */
-    .carousel-product-inner-product .active + .carousel-product-item {
+    .carousel-inner-product .active + .carousel-item {
         display: block;
     }
-    .carousel-product-inner-product .carousel-product-item.active:not(.carousel-product-item-right):not(.carousel-product-item-left),
-    .carousel-product-inner-product .carousel-product-item.active:not(.carousel-product-item-right):not(.carousel-product-item-left) + .carousel-product-item {
+    .carousel-inner-product .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+    .carousel-inner-product .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item {
         transition: none;
     }
-    .carousel-product-inner-product .carousel-product-item-next {
+    .carousel-inner-product .carousel-item-next {
         position: relative;
         transform: translate3d(0, 0, 0);
     }
     /* left or forward direction */
-    .active.carousel-product-item-left + .carousel-product-item-next.carousel-product-item-left,
-    .carousel-product-item-next.carousel-product-item-left + .carousel-product-item,
-    .carousel-product-item-next.carousel-product-item-left + .carousel-product-item + .carousel-product-item {
+    .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+    .carousel-item-next.carousel-item-left + .carousel-item,
+    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item {
         position: relative;
         transform: translate3d(-100%, 0, 0);
         visibility: visible;
     }
     /* farthest right hidden item must be also positioned for animations */
-    .carousel-product-inner-product .carousel-product-item-prev.carousel-product-item-right {
+    .carousel-inner-product .carousel-item-prev.carousel-item-right {
         position: absolute;
         top: 0;
         left: 0;
@@ -59,9 +59,9 @@
         visibility: visible;
     }
     /* right or prev direction */
-    .active.carousel-product-item-right + .carousel-product-item-prev.carousel-product-item-right,
-    .carousel-product-item-prev.carousel-product-item-right + .carousel-product-item,
-    .carousel-product-item-prev.carousel-product-item-right + .carousel-product-item + .carousel-product-item {
+    .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+    .carousel-item-prev.carousel-item-right + .carousel-item,
+    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item {
         position: relative;
         transform: translate3d(100%, 0, 0);
         visibility: visible;
@@ -72,24 +72,24 @@
 /* MD */
 @media (min-width: 768px) {
     /* show 3rd of 3 item slide */
-    .carousel-product-inner-product .active + .carousel-product-item + .carousel-product-item {
+    .carousel-inner-product .active + .carousel-item + .carousel-item {
         display: block;
     }
-    .carousel-product-inner-product .carousel-product-item.active:not(.carousel-product-item-right):not(.carousel-product-item-left) + .carousel-product-item + .carousel-product-item {
+    .carousel-inner-product .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item {
         transition: none;
     }
-    .carousel-product-inner-product .carousel-product-item-next {
+    .carousel-inner-product .carousel-item-next {
         position: relative;
         transform: translate3d(0, 0, 0);
     }
     /* left or forward direction */
-    .carousel-product-item-next.carousel-product-item-left + .carousel-product-item + .carousel-product-item + .carousel-product-item {
+    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item {
         position: relative;
         transform: translate3d(-100%, 0, 0);
         visibility: visible;
     }
     /* right or prev direction */
-    .carousel-product-item-prev.carousel-product-item-right + .carousel-product-item + .carousel-product-item + .carousel-product-item {
+    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item {
         position: relative;
         transform: translate3d(100%, 0, 0);
         visibility: visible;
@@ -100,14 +100,14 @@
 /* LG */
 @media (min-width: 991px) {
     /* show 4th item */
-    .carousel-product-inner-product .active + .carousel-product-item + .carousel-product-item + .carousel-product-item {
+    .carousel-inner-product .active + .carousel-item + .carousel-item + .carousel-item {
         display: block;
     }
-    .carousel-product-inner-product .carousel-product-item.active:not(.carousel-product-item-right):not(.carousel-product-item-left) + .carousel-product-item + .carousel-product-item + .carousel-product-item {
+    .carousel-inner-product .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item {
         transition: none;
     }
     /* Show 5th slide on lg if col-lg-3 */
-    .carousel-product-inner-product .active.col-lg-3.carousel-product-item + .carousel-product-item + .carousel-product-item + .carousel-product-item + .carousel-product-item {
+    .carousel-inner-product .active.col-lg-3.carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
         position: absolute;
         top: 0;
         right: -25%;  /*change this with javascript in the future*/
@@ -116,13 +116,13 @@
         visibility: visible;
     }
     /* left or forward direction */
-    .carousel-product-item-next.carousel-product-item-left + .carousel-product-item + .carousel-product-item + .carousel-product-item + .carousel-product-item {
+    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
         position: relative;
         transform: translate3d(-100%, 0, 0);
         visibility: visible;
     }
     /* right or prev direction //t - previous slide direction last item animation fix */
-    .carousel-product-item-prev.carousel-product-item-right + .carousel-product-item + .carousel-product-item + .carousel-product-item + .carousel-product-item {
+    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
         position: relative;
         transform: translate3d(100%, 0, 0);
         visibility: visible;
@@ -146,11 +146,11 @@
 
 
 
-                       <div id="carousel-product-example" class="carousel-product slide" data-ride="carousel-product">
-                           <div class="carousel-product-inner-product row w-100 mx-auto" role="listbox">
+                       <div id="carousel-example" class="carousel slide" data-ride="carousel">
+                           <div class="carousel-inner-product row w-100 mx-auto" role="listbox">
                @foreach( $Offers_ as $item)
                <div id="product-{{$item->id}}" 
-                    class="col-6 col-md-2 col-sm-4 carousel-product-item col-12 col-sm-6 col-md-4 col-lg-3 active"  style="padding:5px 7px !important"
+                    class="col-6 col-md-2 col-sm-4 carousel-item col-12 col-sm-6 col-md-4 col-lg-3 active"  style="padding:5px 7px !important"
                     onclick="viewProduct({{$item->id}})" >
                     <div class="sc-item-store ">
                          <div class="categorie"> 
@@ -186,12 +186,12 @@
                </div>
                @endforeach
                </div>
-                           <a class="carousel-product-control-prev" href="#carousel-product-example" role="button" data-slide="prev">
-                               <span class="carousel-product-control-prev-icon" aria-hidden="true"></span>
+                           <a class="carousel-control-prev" href="#carousel-example" role="button" data-slide="prev">
+                               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                <span class="sr-only">Previous</span>
                            </a>
-                           <a class="carousel-product-control-next" href="#carousel-product-example" role="button" data-slide="next">
-                               <span class="carousel-product-control-next-icon" aria-hidden="true"></span>
+                           <a class="carousel-control-next" href="#carousel-example" role="button" data-slide="next">
+                               <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                <span class="sr-only">Next</span>
                            </a>
                        </div>
@@ -217,26 +217,26 @@
 
 <script>
      /*
-    carousel-product
+    Carousel
 */
-$('#carousel-product-example').on('slide.bs.carousel-product', function (e) {
+$('#carousel-example').on('slide.bs.carousel', function (e) {
     /*
         CC 2.0 License Iatek LLC 2018 - Attribution required
     */
     var $e = $(e.relatedTarget);
     var idx = $e.index();
     var itemsPerSlide = 5;
-    var totalItems = $('.carousel-product-item').length;
+    var totalItems = $('.carousel-item').length;
  
     if (idx >= totalItems-(itemsPerSlide-1)) {
         var it = itemsPerSlide - (totalItems - idx);
         for (var i=0; i<it; i++) {
             // append slides to end
             if (e.direction=="left") {
-                $('.carousel-product-item').eq(i).appendTo('.carousel-product-inner-product');
+                $('.carousel-item').eq(i).appendTo('.carousel-inner-product');
             }
             else {
-                $('.carousel-product-item').eq(0).appendTo('.carousel-product-inner-product');
+                $('.carousel-item').eq(0).appendTo('.carousel-inner-product');
             }
         }
     }
