@@ -40,7 +40,7 @@
 
      <div class="container-fluid">
      <section class="blogs-1">
-        <div class="container">
+        <div class="container-fluid">
           <div class="row mb-5">
             <div class="col-md-8"><br>
                @if(sizeof($subcategoriasslug_))
