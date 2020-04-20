@@ -78,8 +78,6 @@
      height: 230px;
 }
 
-.red {background: red;}
-
 </style>
 
 @if(sizeof($Offers_)>=1)
@@ -91,68 +89,21 @@
      <div class="store-search-result-totalProducts " style="text-align:right"><span> {{count($Offers_)}} <span class="c-muted-2">Productos encontrados</span></span></div>
 -->
 
-
-
-
-
-<div class="container">
+    <div class="container">
      <div class="row">
           <div class="col-xs-11 col-md-10 col-centered">
 
                <div id="carousel" class="carousel slide" data-ride="carousel" data-type="multi" data-interval="2500">
                     <div class="carousel-inner">
-                         @foreach( $Offers_ as => $item)
-                         <div class="item active">
-                              <div class="carousel-col">
-                                   <div class="block red img-responsive"></div>
-                              </div>
-                         </div>
-                          @endforeach
-                    </div>
-
-                    <!-- Controls -->
-                    <div class="left carousel-control">
-                         <a href="#carousel" role="button" data-slide="prev">
-                              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                              <span class="sr-only">Previous</span>
-                         </a>
-                    </div>
-                    <div class="right carousel-control">
-                         <a href="#carousel" role="button" data-slide="next">
-                              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                              <span class="sr-only">Next</span>
-                         </a>
-                    </div>
-               </div>
-
-          </div>
-     </div>
-</div>
-
-
-
-
-
-
-<!--
-     <div class="container-fluid pad-lft pad-rgt pad-btm "  >
-          <div class="row pad-all">
-
-
-
-                       
-               <div id="carousel" class="carousel slide" data-ride="carousel" data-type="multi" data-interval="2500">
-               <div class="carousel-inner">
-               @foreach( $Offers_ as $index => $item)
-               @if($index == 0)
+               @foreach( $Offers_ as $item)
                <div id="product-{{$item->id}}" 
-                    class="col-6 col-md-2 col-sm-4 carousel-item col-12 col-sm-6 col-md-4 col-lg-3 active"  style="padding:5px 7px !important"
+                    class="col-6 col-md-2 col-sm-4 carousel-item col-12 col-sm-6 col-md-4 col-lg-3 active {{$iteration->loop == 0 ? 'active' : ''}} lasdemasclases"  style="padding:5px 7px !important"
                     onclick="viewProduct({{$item->id}})" >
                     <div class="sc-item-store ">
                          <div class="categorie"> 
                               <!-- <b >
                               {{$item->nameCategorie}}
-                              </b> 
+                              </b> -->
                               <div class="sticky "></div>
                          </div>
                          <div class="img-card-product-ql">
@@ -168,7 +119,7 @@
                          </div>
                          <div class="info-article ">
                               <div class="name">{{$item->nameProduct}}</div>
-                             <!-- <div class="">{{$item->cntbyUnit}}</div> 
+                             <!-- <div class="">{{$item->cntbyUnit}}</div> -->
                               <div class="info-price " >
                                    <div class="item-price" style="text-align:center !important">
                                         $ {{ number_format($item->price, 0) }} {{$item->nameValue}} x {{$item->unidad_venta}}
@@ -180,62 +131,21 @@
                          </div>
                     </div>
                </div>
-                @else
-                <div id="product-{{$item->id}}" 
-                    class="col-6 col-md-2 col-sm-4 carousel-item col-12 col-sm-6 col-md-4 col-lg-3"  style="padding:5px 7px !important"
-                    onclick="viewProduct({{$item->id}})" >
-                    <div class="sc-item-store ">
-                         <div class="categorie"> 
-                              <!-- <b >
-                              {{$item->nameCategorie}}
-                              </b> 
-                              <div class="sticky "></div>
-                         </div>
-                         <div class="img-card-product-ql">
-                              @if(!empty($item->imageProduct))
-                                   @if (file_exists( public_path().'/content/upload/store/'.$item->imageProduct ))
-                                        <img id="logoTheme" src="{{ asset('/content/upload/store/'.$item->imageProduct) }}" alt="Producto" >
-                                   @else
-                                        $item->imageProduct
-                                   @endif
-                              @else
-                                   $item->imageProduct
-                              @endif
-                         </div>
-                         <div class="info-article ">
-                              <div class="name">{{$item->nameProduct}}</div>
-                             <!-- <div class="">{{$item->cntbyUnit}}</div> 
-                              <div class="info-price " >
-                                   <div class="item-price" style="text-align:center !important">
-                                        $ {{ number_format($item->price, 0) }} {{$item->nameValue}} x {{$item->unidad_venta}}
-                                   </div>
-                                   @if($item->previous_price>=1)
-                                        <div class="previous-price txt-center">Antes $ {{ number_format($item->previous_price, 0)}} {{$item->nameValue}}</div>
-                                   @endif
-                              </div>
-                         </div>
-                    </div>
-               </div>
-               @endif
                @endforeach
                </div>
-                     <div class="left carousel-control">
-                         <a href="#carousel" role="button" data-slide="prev">
-                              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                              <span class="sr-only">Previous</span>
-                         </a>
-                    </div>
-                    <div class="right carousel-control">
-                         <a href="#carousel" role="button" data-slide="next">
-                              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                              <span class="sr-only">Next</span>
-                         </a>
-                    </div>
-               </div>
+                           <a class="carousel-control-prev" href="#carousel-example" role="button" data-slide="prev">
+                               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                               <span class="sr-only">Previous</span>
+                           </a>
+                           <a class="carousel-control-next" href="#carousel-example" role="button" data-slide="next">
+                               <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                               <span class="sr-only">Next</span>
+                           </a>
+                       </div>
           </div>
      </div>
      </div>
--->
+
      
      <div class="modal center-modal fade show " id="viewProduct" tabindex="-1">
           <div class="modal-dialog">
@@ -278,6 +188,48 @@ $('.carousel[data-type="multi"] .item').each(function() {
 
 
 
+
+
+
+
+<!--
+<div class="container">
+     <div class="row">
+          <div class="col-xs-11 col-md-10 col-centered">
+
+               <div id="carousel" class="carousel slide" data-ride="carousel" data-type="multi" data-interval="2500">
+                    <div class="carousel-inner">
+                         <div class="item active">
+                              <div class="carousel-col">
+                                   <div class="block red img-responsive"></div>
+                              </div>
+                         </div>
+                         <div class="item">
+                              <div class="carousel-col">
+                                   <div class="block green img-responsive"></div>
+                              </div>
+                         </div>
+                    </div>
+
+                     Controls 
+                    <div class="left carousel-control">
+                         <a href="#carousel" role="button" data-slide="prev">
+                              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                              <span class="sr-only">Previous</span>
+                         </a>
+                    </div>
+                    <div class="right carousel-control">
+                         <a href="#carousel" role="button" data-slide="next">
+                              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                              <span class="sr-only">Next</span>
+                         </a>
+                    </div>
+               </div>
+
+          </div>
+     </div>
+</div>
+-->
 
 
 
