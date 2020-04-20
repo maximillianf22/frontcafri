@@ -5,7 +5,7 @@
 */
 @media (min-width: 768px) and (max-width: 991px) {
     /* Show 4th slide on md if col-md-4*/
-    .carousel-inner-product .active.col-md-4.carousel-item + .carousel-item + .carousel-item + .carousel-item {
+    .carousel-inner .active.col-md-4.carousel-item + .carousel-item + .carousel-item + .carousel-item {
         position: absolute;
         top: 0;
         right: -33.3333%;  /*change this with javascript in the future*/
@@ -16,7 +16,7 @@
 }
 @media (min-width: 576px) and (max-width: 768px) {
     /* Show 3rd slide on sm if col-sm-6*/
-    .carousel-inner-product .active.col-sm-6.carousel-item + .carousel-item + .carousel-item {
+    .carousel-inner .active.col-sm-6.carousel-item + .carousel-item + .carousel-item {
         position: absolute;
         top: 0;
         right: -50%;  /*change this with javascript in the future*/
@@ -30,14 +30,14 @@
         margin-right: 0;
     }
     /* show 2 items */
-    .carousel-inner-product .active + .carousel-item {
+    .carousel-inner .active + .carousel-item {
         display: block;
     }
-    .carousel-inner-product .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
-    .carousel-inner-product .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item {
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item {
         transition: none;
     }
-    .carousel-inner-product .carousel-item-next {
+    .carousel-inner .carousel-item-next {
         position: relative;
         transform: translate3d(0, 0, 0);
     }
@@ -50,7 +50,7 @@
         visibility: visible;
     }
     /* farthest right hidden item must be also positioned for animations */
-    .carousel-inner-product .carousel-item-prev.carousel-item-right {
+    .carousel-inner .carousel-item-prev.carousel-item-right {
         position: absolute;
         top: 0;
         left: 0;
@@ -72,13 +72,13 @@
 /* MD */
 @media (min-width: 768px) {
     /* show 3rd of 3 item slide */
-    .carousel-inner-product .active + .carousel-item + .carousel-item {
+    .carousel-inner .active + .carousel-item + .carousel-item {
         display: block;
     }
-    .carousel-inner-product .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item {
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item {
         transition: none;
     }
-    .carousel-inner-product .carousel-item-next {
+    .carousel-inner .carousel-item-next {
         position: relative;
         transform: translate3d(0, 0, 0);
     }
@@ -100,14 +100,14 @@
 /* LG */
 @media (min-width: 991px) {
     /* show 4th item */
-    .carousel-inner-product .active + .carousel-item + .carousel-item + .carousel-item {
+    .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item {
         display: block;
     }
-    .carousel-inner-product .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item {
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item {
         transition: none;
     }
     /* Show 5th slide on lg if col-lg-3 */
-    .carousel-inner-product .active.col-lg-3.carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+    .carousel-inner .active.col-lg-3.carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
         position: absolute;
         top: 0;
         right: -25%;  /*change this with javascript in the future*/
@@ -147,7 +147,7 @@
 
 
                        <div id="carousel-example" class="carousel slide" data-ride="carousel">
-                           <div class="carousel-inner-product row w-100 mx-auto" role="listbox">
+                           <div class="carousel-inner row w-100 mx-auto" role="listbox">
                @foreach( $Offers_ as $item)
                <div id="product-{{$item->id}}" 
                     class="col-6 col-md-2 col-sm-4 carousel-item col-12 col-sm-6 col-md-4 col-lg-3 active"  style="padding:5px 7px !important"
@@ -233,10 +233,10 @@ $('#carousel-example').on('slide.bs.carousel', function (e) {
         for (var i=0; i<it; i++) {
             // append slides to end
             if (e.direction=="left") {
-                $('.carousel-item').eq(i).appendTo('.carousel-inner-product');
+                $('.carousel-item').eq(i).appendTo('.carousel-inner');
             }
             else {
-                $('.carousel-item').eq(0).appendTo('.carousel-inner-product');
+                $('.carousel-item').eq(0).appendTo('.carousel-inner');
             }
         }
     }
