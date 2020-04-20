@@ -219,7 +219,7 @@ Attribution required
                <div id="carousel-example" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner row w-100 mx-auto" role="listbox">
                          <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 active">
-                                   <img src="assets/img/backgrounds/1.jpg" class="img-fluid mx-auto d-block" alt="img1">
+                                   <img src="https://azmind.com/demo/bootstrap-carousel-multiple-items/assets/img/backgrounds/1.jpg" alt="img1">
                               </div>
                               <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
                                    <img src="https://azmind.com/demo/bootstrap-carousel-multiple-items/assets/img/backgrounds/2.jpg" class="img-fluid mx-auto d-block" alt="img2">
