@@ -1,158 +1,326 @@
 <style type="text/css">
-     .col-centered {
-    float: none;
-    margin: 0 auto;
-}
+/*
 
-.carousel-control { 
-    width: 8%;
-    width: 0px;
-}
-.carousel-control.left,
-.carousel-control.right { 
-    margin-right: 40px;
-    margin-left: 32px; 
-    background-image: none;
-    opacity: 1;
-}
-.carousel-control > a > span {
-    color: white;
-       font-size: 29px !important;
-}
+CC 2.0 License Iatek LLC 2018
+Attribution required
 
-.carousel-col { 
-    position: relative; 
-    min-height: 1px; 
-    padding: 5px; 
-    float: left;
- }
+*/
 
- .active > div { display:none; }
- .active > div:first-child { display:block; }
 
-/*xs*/
-@media (max-width: 767px) {
-  .carousel-inner .active.left { left: -50%; }
-  .carousel-inner .active.right { left: 50%; }
-     .carousel-inner .next        { left:  50%; }
-     .carousel-inner .prev              { left: -50%; }
-  .carousel-col                { width: 50%; }
-     .active > div:first-child + div { display:block; }
-}
-
-/*sm*/
 @media (min-width: 768px) and (max-width: 991px) {
-  .carousel-inner .active.left { left: -50%; }
-  .carousel-inner .active.right { left: 50%; }
-     .carousel-inner .next        { left:  50%; }
-     .carousel-inner .prev              { left: -50%; }
-  .carousel-col                { width: 50%; }
-     .active > div:first-child + div { display:block; }
+  /* Show 4th slide on md  if col-md-4*/
+    .carousel-inner .active.col-md-4.carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: absolute;
+        top: 0;
+        right: -33.3333%;  /*change this with javascript in the future*/
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+
 }
 
-/*md*/
-@media (min-width: 992px) and (max-width: 1199px) {
-  .carousel-inner .active.left { left: -33%; }
-  .carousel-inner .active.right { left: 33%; }
-     .carousel-inner .next        { left:  33%; }
-     .carousel-inner .prev              { left: -33%; }
-  .carousel-col                { width: 33%; }
-     .active > div:first-child + div { display:block; }
-  .active > div:first-child + div + div { display:block; }
+@media (min-width: 576px) and (max-width: 768px) {
+  /* Show 3rd slide on sm  if col-sm-6*/
+    .carousel-inner .active.col-sm-6.carousel-item + .carousel-item + .carousel-item {
+        position: absolute;
+        top: 0;
+        right: -50%;  /*change this with javascript in the future*/
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+
+}
+@media (min-width: 576px) {
+     
+    .carousel-item {
+        margin-right: 0;
+    }
+
+    /* show 2 items */
+    .carousel-inner .active + .carousel-item {
+        display: block;
+    }
+    
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item {
+        transition: none;
+    }
+
+    .carousel-inner .carousel-item-next {
+      position: relative;
+      transform: translate3d(0, 0, 0);
+    }
+    
+    /* left or forward direction */
+    .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+    .carousel-item-next.carousel-item-left + .carousel-item,
+    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    } 
+    
+    /* farthest right hidden item must be abso position for animations */
+    .carousel-inner .carousel-item-prev.carousel-item-right {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+    
+    /* right or prev direction */
+    .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+    .carousel-item-prev.carousel-item-right + .carousel-item,
+    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+        display: block;
+        visibility: visible;
+    }
+
 }
 
-/*lg*/
-@media (min-width: 1200px) {
-  .carousel-inner .active.left { left: -25%; }
-  .carousel-inner .active.right{ left:  25%; }
-     .carousel-inner .next        { left:  25%; }
-     .carousel-inner .prev              { left: -25%; }
-  .carousel-col                { width: 25%; }
-     .active > div:first-child + div { display:block; }
-  .active > div:first-child + div + div { display:block; }
-     .active > div:first-child + div + div + div { display:block; }
+/*MD*/
+@media (min-width: 768px) {
+
+    /* show 3rd of 3 item slide */
+  .carousel-inner .active + .carousel-item + .carousel-item {
+        display: block;
+    }
+ 
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item {
+        transition: none;
+    }
+  
+    
+    .carousel-inner .carousel-item-next {
+      position: relative;
+      transform: translate3d(0, 0, 0);
+    }
+    
+    
+    /* left or forward direction */
+    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+    
+    /* right or prev direction */
+    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+        display: block;
+        visibility: visible;
+    }
+
 }
 
-.block {
-     width: 306px;
-     height: 230px;
+
+/*LG */
+@media (min-width: 991px) {
+
+    /* show 4th item */
+    .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item {
+        display: block;
+    }
+    
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item {
+        transition: none;
+    }
+    
+    /* Show 5th slide on lg if col-lg-3 */
+    .carousel-inner .active.col-lg-3.carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: absolute;
+        top: 0;
+        right: -25%;  /*change this with javascript in the future*/
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+    
+    /* left or forward direction */
+    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+    
+    /* right or prev direction //t - previous slide direction last item animation fix */
+    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+        display: block;
+        visibility: visible;
+    }
+
 }
 
-.red {background: red;}
+/*LG 6th  -  if you want a carousel with 6 slides */
+@media (min-width: 991px) {
 
-.blue {background: blue;}
+        /* show 5th and 6th item */
+ /*   .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item + .carousel-item,
+  .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        display: block;
+    }
 
-.green {background: green;}
-
-.yellow {background: yellow;}
+    
+  
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item + .carousel-item,
+  .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+      transition: none;
+    }
+*/
+    
+  
+  /*show 7th slide for animation when its a 6 slides carousel */
+ /*      .carousel-inner .active.carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item  + .carousel-item {
+        position: absolute;
+        top: 0;
+        right: -16.666666666%;
+        z-index: -1;
+        display: block;
+        visibility: visible;
+  }
+  */
+  
+      /* forward direction > */
+ /*   .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item,
+  .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+  */
+      /* prev direction < last item animation fix */
+ /*   .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item,
+    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+        display: block;
+        visibility: visible;
+    }
+*/
+}
 </style>
 
 @if(sizeof($Offers_)>=1)
-     <div class="container">
-     <div class="row">
-          <div class="col-xs-11 col-md-10 col-centered">
-
-               <div id="carousel" class="carousel slide" data-ride="carousel" data-type="multi" data-interval="2500">
-                    <div class="carousel-inner">
-                         <div class="item active">
-                              <div class="carousel-col">
-                                   <div class="block red img-responsive"></div>
+ <!-- Top content -->
+        <div class="top-content">
+          <div class="container-fluid">
+               <div id="carousel-example" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner row w-100 mx-auto" role="listbox">
+                         <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 active">
+                                   <img src="assets/img/backgrounds/1.jpg" class="img-fluid mx-auto d-block" alt="img1">
                               </div>
-                         </div>
-                         <div class="item">
-                              <div class="carousel-col">
-                                   <div class="block green img-responsive"></div>
+                              <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                                   <img src="assets/img/backgrounds/2.jpg" class="img-fluid mx-auto d-block" alt="img2">
                               </div>
-                         </div>
-                         <div class="item">
-                              <div class="carousel-col">
-                                   <div class="block blue img-responsive"></div>
+                              <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                                   <img src="assets/img/backgrounds/3.jpg" class="img-fluid mx-auto d-block" alt="img3">
                               </div>
-                         </div>
-                         <div class="item">
-                              <div class="carousel-col">
-                                   <div class="block yellow img-responsive"></div>
+                              <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                                   <img src="assets/img/backgrounds/4.jpg" class="img-fluid mx-auto d-block" alt="img4">
                               </div>
-                         </div>
+                              <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                                   <img src="assets/img/backgrounds/5.jpg" class="img-fluid mx-auto d-block" alt="img5">
+                              </div>
+                              <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                                   <img src="assets/img/backgrounds/6.jpg" class="img-fluid mx-auto d-block" alt="img6">
+                              </div>
+                              <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                                   <img src="assets/img/backgrounds/7.jpg" class="img-fluid mx-auto d-block" alt="img7">
+                              </div>
+                              <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                                   <img src="assets/img/backgrounds/8.jpg" class="img-fluid mx-auto d-block" alt="img8">
+                              </div>
                     </div>
-
-                    <!-- Controls -->
-                    <div class="left carousel-control">
-                         <a href="#carousel" role="button" data-slide="prev">
-                              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <a class="carousel-control-prev" href="#carousel-example" role="button" data-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                               <span class="sr-only">Previous</span>
                          </a>
-                    </div>
-                    <div class="right carousel-control">
-                         <a href="#carousel" role="button" data-slide="next">
-                              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                         <a class="carousel-control-next" href="#carousel-example" role="button" data-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
                               <span class="sr-only">Next</span>
                          </a>
-                    </div>
                </div>
-
           </div>
-     </div>
-</div>
+        </div>
 @else
 @endif 
 
 <script>
-$('.carousel[data-type="multi"] .item').each(function() {
-     var next = $(this).next();
-     if (!next.length) {
-          next = $(this).siblings(':first');
-     }
-     next.children(':first-child').clone().appendTo($(this));
 
-     for (var i = 0; i < 2; i++) {
-          next = next.next();
-          if (!next.length) {
-               next = $(this).siblings(':first');
-          }
-
-          next.children(':first-child').clone().appendTo($(this));
+function scroll_to(clicked_link, nav_height) {
+     var element_class = clicked_link.attr('href').replace('#', '.');
+     var scroll_to = 0;
+     if(element_class != '.top-content') {
+          element_class += '-container';
+          scroll_to = $(element_class).offset().top - nav_height;
      }
+     if($(window).scrollTop() != scroll_to) {
+          $('html, body').stop().animate({scrollTop: scroll_to}, 1000);
+     }
+}
+
+
+jQuery(document).ready(function() {
+     
+     /*
+         Navigation
+     */
+     $('a.scroll-link').on('click', function(e) {
+          e.preventDefault();
+          scroll_to($(this), $('nav').outerHeight());
+     });
+     
+    /*
+        Background
+    */
+    $('.section-4-container').backstretch("assets/img/backgrounds/bg.jpg");
+    
+    /*
+         Wow
+     */
+     new WOW().init();
+     
+     /*
+         Carousel
+     */
+     $('#carousel-example').on('slide.bs.carousel', function (e) {
+
+         /*
+             CC 2.0 License Iatek LLC 2018
+             Attribution required
+         */
+         var $e = $(e.relatedTarget);
+         var idx = $e.index();
+         var itemsPerSlide = 5;
+         var totalItems = $('.carousel-item').length;
+         
+         if (idx >= totalItems-(itemsPerSlide-1)) {
+             var it = itemsPerSlide - (totalItems - idx);
+             for (var i=0; i<it; i++) {
+                 // append slides to end
+                 if (e.direction=="left") {
+                     $('.carousel-item').eq(i).appendTo('.carousel-inner');
+                 }
+                 else {
+                     $('.carousel-item').eq(0).appendTo('.carousel-inner');
+                 }
+             }
+         }
+     });
+     
 });
 </script>
 
