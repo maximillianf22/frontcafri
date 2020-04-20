@@ -49,7 +49,7 @@
                @endif
             </div>
           </div>
-            <div class="row align-items-center p-3">
+            <div class="row align-items-center p-0">
           @foreach( $Store_categorie_ as $subcategorias)
           @if($subcategorias->nameCategorie == 'Bebidas')
             <div class="col-lg-3">
