@@ -20,7 +20,8 @@
   <!--- theme default --->
   <link rel="stylesheet" href="{{asset('components/theme/core.theme.css') }} ">
   <link type="text/css" href="{{ asset('front') }}/css/argonCategory.min.css?v=1.0.2" rel="stylesheet">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
 </head>
 <body onload="iLoadPage();">
     @include(JPATH_COMPONENTS . 'core.comp_head.index')
@@ -58,6 +59,7 @@
   <script type='text/javascript' src="{{asset('components/password-meter/pwstrength-bootstrap.min.js')}}"></script>
   <script type='text/javascript' src="{{asset('components/password-meter/zxcvbn.js')}}"></script>
   <script type='text/javascript' src="{{asset('components/password-meter/password-meter-active.js')}}"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
 
   <script>
     ! function(window, document, $) {
