@@ -52,7 +52,7 @@
             <div class="row align-items-center p-3">
           @foreach( $Store_categorie_ as $subcategorias)
           @if($subcategorias->nameCategorie == 'Bebidas')
-            <div class="col-lg-8">
+            <div class="col-lg-3">
               <div class="card card-blog card-background" data-animation="zooming">
                 <div class="full-background" style="background-image: url('{{ asset('/content/upload/store/'.$subcategorias->imageCategorie) }}')"></div>
                 <a href="{{route('store.subcategory.lisproduct',[$subcategorias->slug_main,$subcategorias->slug_subcategoria])}}" 
@@ -69,7 +69,7 @@
               </div>
             </div>
             @else
-            <div class="col-lg-4">
+            <div class="col-lg-3">
               <div class="card card-blog card-background" data-animation="zooming">
                 <div class="full-background" style="background-image: url('{{ asset('/content/upload/store/'.$subcategorias->imageCategorie) }}')"></div>
                 <a href="{{route('store.subcategory.lisproduct',[$subcategorias->slug_main,$subcategorias->slug_subcategoria])}}" 
