@@ -218,30 +218,85 @@ Attribution required
           <div class="container-fluid">
                <div id="carousel-example" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner row w-100 mx-auto" role="listbox">
+                          @foreach( $Offers_ as $index => $item)
+                          @if($index == 0)
                          <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 active">
-                                   <img src="https://azmind.com/demo/bootstrap-carousel-multiple-items/assets/img/backgrounds/1.jpg" alt="img1">
+                              <div id="product-{{$item->id}}" 
+                      style="padding:5px 7px !important"
+                    onclick="viewProduct({{$item->id}})" >
+                    <div class="sc-item-store ">
+                         <div class="categorie"> 
+                              <!-- <b >
+                              {{$item->nameCategorie}}
+                              </b> -->
+                              <div class="sticky "></div>
+                         </div>
+                         <div class="img-card-product-ql">
+                              @if(!empty($item->imageProduct))
+                                   @if (file_exists( public_path().'/content/upload/store/'.$item->imageProduct ))
+                                        <img id="logoTheme" src="{{ asset('/content/upload/store/'.$item->imageProduct) }}" alt="Producto" >
+                                   @else
+                                        $item->imageProduct
+                                   @endif
+                              @else
+                                   $item->imageProduct
+                              @endif
+                         </div>
+                         <div class="info-article ">
+                              <div class="name">{{$item->nameProduct}}</div>
+                             <!-- <div class="">{{$item->cntbyUnit}}</div> -->
+                              <div class="info-price " >
+                                   <div class="item-price" style="text-align:center !important">
+                                        $ {{ number_format($item->price, 0) }} {{$item->nameValue}} x {{$item->unidad_venta}}
+                                   </div>
+                                   @if($item->previous_price>=1)
+                                        <div class="previous-price txt-center">Antes $ {{ number_format($item->previous_price, 0)}} {{$item->nameValue}}</div>
+                                   @endif
                               </div>
-                              <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
-                                   <img src="https://azmind.com/demo/bootstrap-carousel-multiple-items/assets/img/backgrounds/2.jpg" class="img-fluid mx-auto d-block" alt="img2">
+                         </div>
+                    </div>
+               </div>
+                         </div>
+                         @else
+                         <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                              <div id="product-{{$item->id}}" 
+                      style="padding:5px 7px !important"
+                    onclick="viewProduct({{$item->id}})" >
+                    <div class="sc-item-store ">
+                         <div class="categorie"> 
+                              <!-- <b >
+                              {{$item->nameCategorie}}
+                              </b> -->
+                              <div class="sticky "></div>
+                         </div>
+                         <div class="img-card-product-ql">
+                              @if(!empty($item->imageProduct))
+                                   @if (file_exists( public_path().'/content/upload/store/'.$item->imageProduct ))
+                                        <img id="logoTheme" src="{{ asset('/content/upload/store/'.$item->imageProduct) }}" alt="Producto" >
+                                   @else
+                                        $item->imageProduct
+                                   @endif
+                              @else
+                                   $item->imageProduct
+                              @endif
+                         </div>
+                         <div class="info-article ">
+                              <div class="name">{{$item->nameProduct}}</div>
+                             <!-- <div class="">{{$item->cntbyUnit}}</div> -->
+                              <div class="info-price " >
+                                   <div class="item-price" style="text-align:center !important">
+                                        $ {{ number_format($item->price, 0) }} {{$item->nameValue}} x {{$item->unidad_venta}}
+                                   </div>
+                                   @if($item->previous_price>=1)
+                                        <div class="previous-price txt-center">Antes $ {{ number_format($item->previous_price, 0)}} {{$item->nameValue}}</div>
+                                   @endif
                               </div>
-                              <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
-                                   <img src="https://azmind.com/demo/bootstrap-carousel-multiple-items/assets/img/backgrounds/3.jpg" class="img-fluid mx-auto d-block" alt="img3">
-                              </div>
-                              <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
-                                   <img src="https://azmind.com/demo/bootstrap-carousel-multiple-items/assets/img/backgrounds/4.jpg" class="img-fluid mx-auto d-block" alt="img4">
-                              </div>
-                              <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
-                                   <img src="https://azmind.com/demo/bootstrap-carousel-multiple-items/assets/img/backgrounds/5.jpg" class="img-fluid mx-auto d-block" alt="img5">
-                              </div>
-                              <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
-                                   <img src="https://azmind.com/demo/bootstrap-carousel-multiple-items/assets/img/backgrounds/6.jpg" class="img-fluid mx-auto d-block" alt="img6">
-                              </div>
-                              <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
-                                   <img src="https://azmind.com/demo/bootstrap-carousel-multiple-items/assets/img/backgrounds/7.jpg" class="img-fluid mx-auto d-block" alt="img7">
-                              </div>
-                              <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
-                                   <img src="https://azmind.com/demo/bootstrap-carousel-multiple-items/assets/img/backgrounds/8.jpg" class="img-fluid mx-auto d-block" alt="img8">
-                              </div>
+                         </div>
+                    </div>
+               </div>
+                         </div>
+                         @endif
+                         @endforeach
                     </div>
                     <a class="carousel-control-prev" href="#carousel-example" role="button" data-slide="prev">
                               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -336,5 +391,3 @@ jQuery(document).ready(function() {
 
 
 
-
-<!-- Top content -->
