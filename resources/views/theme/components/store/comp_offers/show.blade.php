@@ -9,9 +9,12 @@
 
      <div class="container-fluid pad-lft pad-rgt pad-btm "  >
           <div class="row pad-all">
+               <div class="container-fluid">
+               <div id="carousel-example" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner row w-100 mx-auto" role="listbox">
                @foreach( $Offers_ as $item)
                <div id="product-{{$item->id}}" 
-                    class="col-6 col-md-2 col-sm-4"  style="padding:5px 7px !important"
+                    class="carousel-item col-6 col-md-2 col-sm-4"  style="padding:5px 7px !important"
                     onclick="viewProduct({{$item->id}})" >
                     <div class="sc-item-store ">
                          <div class="categorie"> 
@@ -46,6 +49,17 @@
                     </div>
                </div>
                @endforeach
+               </div>
+               <a class="carousel-control-prev" href="#carousel-example" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+               </a>
+               <a class="carousel-control-next" href="#carousel-example" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+               </a>
+               </div>
+          </div>
           </div>
      </div>
      </div>
