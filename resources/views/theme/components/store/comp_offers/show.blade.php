@@ -148,7 +148,8 @@
 
                        <div id="carousel-example" class="carousel slide" data-ride="carousel">
                            <div class="carousel-inner row w-100 mx-auto" role="listbox">
-               @foreach( $Offers_ as $item)
+               @foreach( $Offers_ as $index => $item)
+               @if($index == 0)
                <div id="product-{{$item->id}}" 
                     class="col-6 col-md-2 col-sm-4 carousel-item col-12 col-sm-6 col-md-4 col-lg-3 active"  style="padding:5px 7px !important"
                     onclick="viewProduct({{$item->id}})" >
@@ -184,6 +185,43 @@
                          </div>
                     </div>
                </div>
+                @else
+                <div id="product-{{$item->id}}" 
+                    class="col-6 col-md-2 col-sm-4 carousel-item col-12 col-sm-6 col-md-4 col-lg-3"  style="padding:5px 7px !important"
+                    onclick="viewProduct({{$item->id}})" >
+                    <div class="sc-item-store ">
+                         <div class="categorie"> 
+                              <!-- <b >
+                              {{$item->nameCategorie}}
+                              </b> -->
+                              <div class="sticky "></div>
+                         </div>
+                         <div class="img-card-product-ql">
+                              @if(!empty($item->imageProduct))
+                                   @if (file_exists( public_path().'/content/upload/store/'.$item->imageProduct ))
+                                        <img id="logoTheme" src="{{ asset('/content/upload/store/'.$item->imageProduct) }}" alt="Producto" >
+                                   @else
+                                        $item->imageProduct
+                                   @endif
+                              @else
+                                   $item->imageProduct
+                              @endif
+                         </div>
+                         <div class="info-article ">
+                              <div class="name">{{$item->nameProduct}}</div>
+                             <!-- <div class="">{{$item->cntbyUnit}}</div> -->
+                              <div class="info-price " >
+                                   <div class="item-price" style="text-align:center !important">
+                                        $ {{ number_format($item->price, 0) }} {{$item->nameValue}} x {{$item->unidad_venta}}
+                                   </div>
+                                   @if($item->previous_price>=1)
+                                        <div class="previous-price txt-center">Antes $ {{ number_format($item->previous_price, 0)}} {{$item->nameValue}}</div>
+                                   @endif
+                              </div>
+                         </div>
+                    </div>
+               </div>
+               @endif
                @endforeach
                </div>
                            <a class="carousel-control-prev" href="#carousel-example" role="button" data-slide="prev">
