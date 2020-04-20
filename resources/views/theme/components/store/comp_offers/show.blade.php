@@ -1,325 +1,169 @@
 <style type="text/css">
-/*
+/* Slider */
 
-CC 2.0 License Iatek LLC 2018
-Attribution required
-
-*/
-
-
-@media (min-width: 768px) and (max-width: 991px) {
-  /* Show 4th slide on md  if col-md-4*/
-    .carousel-inner .active.col-md-4.carousel-item + .carousel-item + .carousel-item + .carousel-item {
-        position: absolute;
-        top: 0;
-        right: -33.3333%;  /*change this with javascript in the future*/
-        z-index: -1;
-        display: block;
-        visibility: visible;
-    }
-
+.slick-slide {
+    margin: 0px 20px;
 }
 
-@media (min-width: 576px) and (max-width: 768px) {
-  /* Show 3rd slide on sm  if col-sm-6*/
-    .carousel-inner .active.col-sm-6.carousel-item + .carousel-item + .carousel-item {
-        position: absolute;
-        top: 0;
-        right: -50%;  /*change this with javascript in the future*/
-        z-index: -1;
-        display: block;
-        visibility: visible;
-    }
-
-}
-@media (min-width: 576px) {
-     
-    .carousel-item {
-        margin-right: 0;
-    }
-
-    /* show 2 items */
-    .carousel-inner .active + .carousel-item {
-        display: block;
-    }
-    
-    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
-    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item {
-        transition: none;
-    }
-
-    .carousel-inner .carousel-item-next {
-      position: relative;
-      transform: translate3d(0, 0, 0);
-    }
-    
-    /* left or forward direction */
-    .active.carousel-item-left + .carousel-item-next.carousel-item-left,
-    .carousel-item-next.carousel-item-left + .carousel-item,
-    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item {
-        position: relative;
-        transform: translate3d(-100%, 0, 0);
-        visibility: visible;
-    } 
-    
-    /* farthest right hidden item must be abso position for animations */
-    .carousel-inner .carousel-item-prev.carousel-item-right {
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        display: block;
-        visibility: visible;
-    }
-    
-    /* right or prev direction */
-    .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
-    .carousel-item-prev.carousel-item-right + .carousel-item,
-    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item {
-        position: relative;
-        transform: translate3d(100%, 0, 0);
-        visibility: visible;
-        display: block;
-        visibility: visible;
-    }
-
+.slick-slide img {
+    width: 100%;
 }
 
-/*MD*/
-@media (min-width: 768px) {
-
-    /* show 3rd of 3 item slide */
-  .carousel-inner .active + .carousel-item + .carousel-item {
-        display: block;
-    }
- 
-    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item {
-        transition: none;
-    }
-  
-    
-    .carousel-inner .carousel-item-next {
-      position: relative;
-      transform: translate3d(0, 0, 0);
-    }
-    
-    
-    /* left or forward direction */
-    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item {
-        position: relative;
-        transform: translate3d(-100%, 0, 0);
-        visibility: visible;
-    }
-    
-    /* right or prev direction */
-    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item {
-        position: relative;
-        transform: translate3d(100%, 0, 0);
-        visibility: visible;
-        display: block;
-        visibility: visible;
-    }
-
+.slick-slider
+{
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+            user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
 }
 
-
-/*LG */
-@media (min-width: 991px) {
-
-    /* show 4th item */
-    .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item {
-        display: block;
-    }
-    
-    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item {
-        transition: none;
-    }
-    
-    /* Show 5th slide on lg if col-lg-3 */
-    .carousel-inner .active.col-lg-3.carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
-        position: absolute;
-        top: 0;
-        right: -25%;  /*change this with javascript in the future*/
-        z-index: -1;
-        display: block;
-        visibility: visible;
-    }
-    
-    /* left or forward direction */
-    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
-        position: relative;
-        transform: translate3d(-100%, 0, 0);
-        visibility: visible;
-    }
-    
-    /* right or prev direction //t - previous slide direction last item animation fix */
-    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
-        position: relative;
-        transform: translate3d(100%, 0, 0);
-        visibility: visible;
-        display: block;
-        visibility: visible;
-    }
-
+.slick-list
+{
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus
+{
+    outline: none;
+}
+.slick-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
 }
 
-/*LG 6th  -  if you want a carousel with 6 slides */
-@media (min-width: 991px) {
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
 
-        /* show 5th and 6th item */
- /*   .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item + .carousel-item,
-  .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
-        display: block;
-    }
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+}
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
 
-    
-  
-    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item + .carousel-item,
-  .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
-      transition: none;
-    }
-*/
-    
-  
-  /*show 7th slide for animation when its a 6 slides carousel */
- /*      .carousel-inner .active.carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item  + .carousel-item {
-        position: absolute;
-        top: 0;
-        right: -16.666666666%;
-        z-index: -1;
-        display: block;
-        visibility: visible;
-  }
-  */
-  
-      /* forward direction > */
- /*   .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item,
-  .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
-        position: relative;
-        transform: translate3d(-100%, 0, 0);
-        visibility: visible;
-    }
-  */
-      /* prev direction < last item animation fix */
- /*   .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item,
-    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
-        position: relative;
-        transform: translate3d(100%, 0, 0);
-        visibility: visible;
-        display: block;
-        visibility: visible;
-    }
-*/
+.slick-slide
+{
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+.slick-slide img
+{
+    display: block;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+    height: auto;
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
 }
 </style>
 @if(sizeof($Offers_)>=1)
  <!-- Top content -->
-        <div class="top-content">
-          <div class="container-fluid">
-               <div id="carousel-example" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner row w-100 mx-auto" role="listbox">
-                         <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 active">
-                                   <img src="https://azmind.com/demo/bootstrap-carousel-multiple-items/assets/img/backgrounds/1.jpg" alt="img1">
-                              </div>
-                              <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
-                                   <img src="https://azmind.com/demo/bootstrap-carousel-multiple-items/assets/img/backgrounds/2.jpg" class="img-fluid mx-auto d-block" alt="img2">
-                              </div>
-                              <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
-                                   <img src="https://azmind.com/demo/bootstrap-carousel-multiple-items/assets/img/backgrounds/3.jpg" class="img-fluid mx-auto d-block" alt="img3">
-                              </div>
-                              <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
-                                   <img src="https://azmind.com/demo/bootstrap-carousel-multiple-items/assets/img/backgrounds/4.jpg" class="img-fluid mx-auto d-block" alt="img4">
-                              </div>
-                              <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
-                                   <img src="https://azmind.com/demo/bootstrap-carousel-multiple-items/assets/img/backgrounds/5.jpg" class="img-fluid mx-auto d-block" alt="img5">
-                              </div>
-                              <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
-                                   <img src="https://azmind.com/demo/bootstrap-carousel-multiple-items/assets/img/backgrounds/6.jpg" class="img-fluid mx-auto d-block" alt="img6">
-                              </div>
-                              <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
-                                   <img src="https://azmind.com/demo/bootstrap-carousel-multiple-items/assets/img/backgrounds/7.jpg" class="img-fluid mx-auto d-block" alt="img7">
-                              </div>
-                              <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
-                                   <img src="https://azmind.com/demo/bootstrap-carousel-multiple-items/assets/img/backgrounds/8.jpg" class="img-fluid mx-auto d-block" alt="img8">
-                              </div>
-                    </div>
-                    <a class="carousel-control-prev" href="#carousel-example" role="button" data-slide="prev">
-                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                              <span class="sr-only">Previous</span>
-                         </a>
-                         <a class="carousel-control-next" href="#carousel-example" role="button" data-slide="next">
-                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                              <span class="sr-only">Next</span>
-                         </a>
-               </div>
-          </div>
-        </div>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+
+<div class="container">
+  <h2>Our  Partners/ Our Clients</h2>
+   <section class="customer-logos slider">
+      <div class="slide"><img src="https://image.freepik.com/free-vector/luxury-letter-e-logo-design_1017-8903.jpg"></div>
+      <div class="slide"><img src="http://www.webcoderskull.com/img/logo.png"></div>
+      <div class="slide"><img src="https://image.freepik.com/free-vector/3d-box-logo_1103-876.jpg"></div>
+      <div class="slide"><img src="https://image.freepik.com/free-vector/blue-tech-logo_1103-822.jpg"></div>
+      <div class="slide"><img src="https://image.freepik.com/free-vector/colors-curl-logo-template_23-2147536125.jpg"></div>
+      <div class="slide"><img src="https://image.freepik.com/free-vector/abstract-cross-logo_23-2147536124.jpg"></div>
+      <div class="slide"><img src="https://image.freepik.com/free-vector/football-logo-background_1195-244.jpg"></div>
+      <div class="slide"><img src="https://image.freepik.com/free-vector/background-of-spots-halftone_1035-3847.jpg"></div>
+      <div class="slide"><img src="https://image.freepik.com/free-vector/retro-label-on-rustic-background_82147503374.jpg"></div>
+   </section>
+   
+<h2><a href="http://www.webcoderskull.com" target="_blank">http://www.webcoderskull.com</a></h2>
+</div>
 @else
 @endif 
 
 <script>
-
-function scroll_to(clicked_link, nav_height) {
-     var element_class = clicked_link.attr('href').replace('#', '.');
-     var scroll_to = 0;
-     if(element_class != '.top-content') {
-          element_class += '-container';
-          scroll_to = $(element_class).offset().top - nav_height;
-     }
-     if($(window).scrollTop() != scroll_to) {
-          $('html, body').stop().animate({scrollTop: scroll_to}, 1000);
-     }
-}
-
-
-jQuery(document).ready(function() {
-     
-     /*
-         Navigation
-     */
-     $('a.scroll-link').on('click', function(e) {
-          e.preventDefault();
-          scroll_to($(this), $('nav').outerHeight());
-     });
-     
-    /*
-        Background
-    */
-    $('.section-4-container').backstretch("assets/img/backgrounds/bg.jpg");
-    
-    /*
-         Wow
-     */
-     new WOW().init();
-     
-     /*
-         Carousel
-     */
-     $('#carousel-example').on('slide.bs.carousel', function (e) {
-
-         /*
-             CC 2.0 License Iatek LLC 2018
-             Attribution required
-         */
-         var $e = $(e.relatedTarget);
-         var idx = $e.index();
-         var itemsPerSlide = 5;
-         var totalItems = $('.carousel-item').length;
-         
-         if (idx >= totalItems-(itemsPerSlide-1)) {
-             var it = itemsPerSlide - (totalItems - idx);
-             for (var i=0; i<it; i++) {
-                 // append slides to end
-                 if (e.direction=="left") {
-                     $('.carousel-item').eq(i).appendTo('.carousel-inner');
-                 }
-                 else {
-                     $('.carousel-item').eq(0).appendTo('.carousel-inner');
-                 }
-             }
-         }
-     });
-     
+$(document).ready(function(){
+    $('.customer-logos').slick({
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1500,
+        arrows: false,
+        dots: false,
+        pauseOnHover: false,
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 4
+            }
+        }, {
+            breakpoint: 520,
+            settings: {
+                slidesToShow: 3
+            }
+        }]
+    });
 });
 </script>
 
