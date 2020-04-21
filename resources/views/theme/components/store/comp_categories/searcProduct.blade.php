@@ -1,8 +1,8 @@
-<div class="row">
+<div class="row p-5 m-5 bg-light">
      <div class="col-2 col pad-all  "></div>
  
      <div class="col-8 col pad-all ">
-          <input class="searchProduct" 
+          <input class="searchProduct shadow-lg" 
           data-id="{{$Slug_->id_categorie}}" 
           data-slugmain="{{$Slug_->slug_main}}" 
           data-slug="@if(!empty($subslug)) {{ $subslug }} @endif " 
