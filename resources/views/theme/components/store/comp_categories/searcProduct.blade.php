@@ -1,4 +1,4 @@
-<div class="row p-5 m-5 bg-light">
+<div class="row p-5 mt-5 mb-5 bg-light">
      <div class="col-2 col pad-all  "></div>
  
      <div class="col-8 col pad-all ">
