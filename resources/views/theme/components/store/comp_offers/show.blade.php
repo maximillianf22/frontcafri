@@ -216,7 +216,7 @@ Attribution required
  <!-- Top content -->
         <div class="top-content">
           <div class="container-fluid">
-               div class="row mb-5">
+               <div class="row mb-5">
                       <div class="col-md-8"><br>
                         <h3 class="display-3">Ofertas del Día</h3>
                         <p class="lead mt-1">¡No las dejes pasar Aprovecha!</p>
