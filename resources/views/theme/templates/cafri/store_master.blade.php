@@ -20,7 +20,12 @@
   <!--- theme default --->
   <link rel="stylesheet" href="{{asset('components/theme/core.theme.css') }} ">
   <link type="text/css" href="{{ asset('front') }}/css/argonCategory.min.css?v=1.0.2" rel="stylesheet">
-
+<style type="text/css">
+  .modal-body {
+    max-height: calc(100vh - 210px) !important ;
+    overflow-y: auto !important;
+}
+</style>
 </head>
 <body onload="iLoadPage();">
     @include(JPATH_COMPONENTS . 'core.comp_head.index')
