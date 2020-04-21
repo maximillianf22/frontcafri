@@ -22,7 +22,7 @@
   <link type="text/css" href="{{ asset('front') }}/css/argonCategory.min.css?v=1.0.2" rel="stylesheet">
 <style type="text/css">
   .modal-body {
-    max-height: calc(100vh - 250px) !important ;
+    max-height: calc(110vh - 250px) !important ;
     overflow-y: auto !important;
 }
 </style>
