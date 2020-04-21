@@ -24,6 +24,7 @@
   .modal-body {
     max-height: calc(110vh - 250px) !important ;
     overflow-y: auto !important;
+    
 }
 </style>
 </head>
