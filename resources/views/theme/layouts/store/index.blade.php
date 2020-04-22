@@ -1,4 +1,3 @@
-
 @extends('theme.templates.'.$Config_->nameDirectory.'.'.$Config_->themeTemplate)
 @section('content-store-theme')
 @include('theme.includes.defines')

@@ -63,7 +63,7 @@
 @else
 @endif 
 
-<div class="modal center-modal fade show " style="overflow-y: scroll;" id="viewProduct" tabindex="-1">
+<div class="modal center-modal fade show " style="overflow-y: scroll !important;" id="viewProduct" tabindex="-1">
      <div class="modal-dialog">
           <div class="modal-content">
                <div class="modal-body">
