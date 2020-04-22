@@ -12,7 +12,7 @@ Attribution required
     @media (min-width: 768px) and (max-width: 991px) {
 
         /* Show 4th slide on md if col-md-4*/
-        .carousel-inner .active.col-md-4.carousel-item+.carousel-item+.carousel-item+.carousel-item {
+        .carousel-inner .active.col-md-4.carousel-item+.carousel-item+.carousel-item+.carousel-item+.carousel-item+.carousel-item {
             position: absolute;
             top: 0;
             right: -33.3333%;
@@ -175,7 +175,7 @@ Attribution required
     <div id="carousel-example" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner row w-100 mx-auto" role="listbox">
             @foreach( $Offers_ as $item)
-            <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 {{$loop->iteration == 1 ? 'active' : ''}}">
+            <div class="carousel-item col-6 col-sm-4 col-md-3 col-lg-2 {{$loop->iteration == 1 ? 'active' : ''}}">
                 <div id="product-{{$item->id}}" style="padding:5px 7px !important" onclick="viewProduct({{$item->id}})">
                     <div class="sc-item-store ">
                         <div class="categorie">
