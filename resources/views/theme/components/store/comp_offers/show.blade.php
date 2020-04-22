@@ -181,7 +181,7 @@ Attribution required
             <p class="lead mt-1">¡No las dejes pasar Aprovecha!</p>
         </div>
     </div>
-    <div id="carousel-example" class="carousel slide" data-ride="carousel">
+    <div id="carousel-example" class="carousel slide col-8" data-ride="carousel">
         <div class="carousel-inner row w-100 mx-auto" role="listbox">
             @foreach( $Offers_ as $item)
             <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 {{$loop->iteration == 1 ? 'active' : ''}}">
