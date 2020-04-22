@@ -151,7 +151,7 @@ div[disabled]{
 .sc-item-store .categorie{ font-size:11px !important; padding:7px;color:#212121; font-weight: normal !important;}
 .sc-item-store .categorie b{font-weight: normal !important;}
 
-.sticky { position:absolute; top:4px; left:7px;
+.sticky { position:absolute; top:4px; left:21px;
 	background:url("/content/upload/Stickers.png") top left no-repeat;
 	height: 70px; width: 83px;
 }
